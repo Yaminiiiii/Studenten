@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, i=1;
+    float Note, sum=0, ave, max=0, min=100;
+    cout << "Geben sie Ihre Note ein: ";
+    cin >> n;
+
+    for (i ;  i<=n ; i++)
+    {
+        cout << "enter the "<< "Note " << i << ": " ;
+        cin >> Note;
+        sum+=Note;
+        ave=sum/i;
+        if (min > Note)
+            min=Note;
+        if (max < Note)
+            max=Note;
+    }
+
+    cout << "maxi: " << max <<endl<< "min: " << min <<endl << "ave: " << ave;
+    return 0;
+}
